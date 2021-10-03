@@ -1,0 +1,129 @@
+/* carousel part */
+.carousel {
+  height: 100vh;
+  width: 100%;
+}
+.carousel__item {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: .5s ease-in-out;
+}
+.carousel__item.active {
+  opacity: 1;
+  transition-duration: .5s;
+}
+.carousel__item__text { margin-top: -1000px }
+
+.carousel__item.active .carousel__item__text {
+  text-transform: uppercase;
+  font-size: 3em;
+  color:  var(--text-color);
+  border-radius: 10px;
+  animation-name: text;
+  animation-duration: 4s;
+}
+
+@keyframes text {
+  0% {
+    margin-top: -200px;
+    opacity: .5;
+  }
+  to {
+    margin-top: 400px;
+    opacity: 1;
+  }
+}
+
+.carousel img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index:  -1;
+}
+
+/* navbar 
+	section */
+nav {
+  grid-template-columns: 2fr 4fr 1fr;
+  line-height: 3em;
+  margin: 50px 0 0;
+}
+nav li {
+  border-bottom: 2px solid var(--text-color);
+}
+nav ul:hover li {
+  border-bottom: 2px solid transparent;
+}
+
+
+/* brand name */
+.brandName {
+  justify-self: center;
+  font-size: 3em;
+  color: var(--text-color);
+}
+
+/* burger icon */
+.nav__menu__burger {
+  display: none;
+}
+
+.nav__menu__burger__top,
+.nav__menu__burger__middle,
+.nav__menu__burger__bottom {
+  transition: .2s;
+  background-color: var(--text-color);
+  height: 5px;
+  width: 35px;
+  margin: 7px 0;
+}
+.nav__menu__burger.active .nav__menu__burger__top {
+  transform: rotate(-45deg) translate(-11px, 6px);
+}
+.nav__menu__burger.active .nav__menu__burger__middle {
+  opacity: 0;
+}
+
+.nav__menu__burger.active .nav__menu__burger__bottom {
+  transform: rotate(45deg) translate(-10px, -6px);
+}
+
+/* nav menu */
+.nav__menu__links {
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.path {
+  color: var(--text-color);
+  text-decoration: none;
+  width: 150px;
+  transition: .35s;
+  border-bottom: 1px solid var(--text-color);
+  border-radius: 5px;
+}
+.path:hover {
+  background-color: var(--text-color);
+  color: white;
+}
+.path.active {
+  background-color: var(--text-color);
+  color: white;
+}
+
+/* cart icon */
+
+.cart__icon {
+  color: var(--text-color);
+}
+.cart__qty {
+  color: var(--text-color);
+  padding-left: 3px;
+  font-size: 1.35em;
+  font-weight: 600;
+}

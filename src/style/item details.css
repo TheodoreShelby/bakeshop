@@ -1,0 +1,98 @@
+/* style for Details component */
+.details {
+  margin: 100px 50px;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+}
+.details__img {
+  margin: 0 auto;
+  height: 280px;
+}
+.details__img img{
+  height: 100%;
+  border-radius: 4px;
+}
+.details__info {
+  line-height: 1.5em;
+  width: 70%;
+  color:#a05e17;
+}
+.details__info__name {
+  font-size: 2em;
+  padding: 10px 0;
+}
+.details__info__order {
+  margin: 20px auto;
+  width: 60%;
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  transition: .35s;
+}
+
+.details__info__order:hover{
+  background-color: var(--text-color);
+}
+
+.details__info__order a {
+  color: var(--text-color);
+  width: 100%;
+  font-size: 1.4em;
+  font-weight: 500;
+	color: var(--text-color);
+  padding: 10px 0;
+}
+
+.details__info__order:hover a {
+  color: white
+}
+
+.ingredient, .price {
+  font-weight: 700;
+}
+
+/* style for 'add' and 'minus' buttons */
+.addAndMinus {
+  margin: 20px auto;
+  grid-template-columns: repeat(2, 1fr);
+  width: 25%;
+  justify-items: center;
+}
+
+.addBtn,
+.minusBtn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--text-color);
+  border-radius: 2px;
+  transition: .35s ease-in-out;
+}
+.addBtn:hover,
+.minusBtn:hover {
+	background-color: var(--text-color)
+}
+
+.addBtn:active,
+.minusBtn:active {
+  animation: onClick .1s
+}
+@keyframes onClick {
+  from { background-color: white }
+  to { background-color: var(--text-color) }
+}
+
+.addBtn__icon,
+.minusBtn__icon {
+  width: 26px;
+  height: 4px;
+  background-color: var(--text-color);
+  top: 15.5px;
+  left: 4px;
+  border-radius: 1px;
+}
+.addBtn__icon:nth-child(2) {
+	transform: rotate(90deg)
+}
+.addBtn:hover .addBtn__icon,
+.minusBtn:hover .minusBtn__icon {
+	background-color: white
+}
