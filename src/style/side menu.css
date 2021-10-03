@@ -1,0 +1,37 @@
+/* side menu section */
+/* .sideMenu-container {
+  background-color: teal;
+} */
+
+.sideMenu {
+  width: 120px;
+  height: auto;
+  margin: 50px auto;
+  border-radius: 5px;
+}
+.sideMenu__item {
+  line-height: 3em;
+  width: 100%;
+  height: auto;
+  color: var(--text-color);
+  background-color: white;
+  border: 1px solid var(--text-color);
+  transition: .15s;
+}
+.sideMenu__item:nth-child(1) {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.sideMenu__item:nth-child(4) {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.sideMenu__item:hover {
+	background-color: var(--text-color);
+  color: white;
+}
+/* when clicked */
+.sideMenu__item.active {
+  background-color: var(--text-color);
+  color: white;
+}
