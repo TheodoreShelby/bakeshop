@@ -64,11 +64,20 @@ form h2 {
   margin: 10px auto;
 }
 /* input and placeholder */
-::placeholder {
+/* need to work on input height */ 
+input,
+select {
   padding: 5px;
 }
-input, label {
+input,
+label {
   line-height: 2em;
+}
+select {
+  height: 2.3em;
+}
+option {
+  font-size: 1.1em;
 }
 
 /* style for date picker */
@@ -144,7 +153,8 @@ thead tr th {
   border: 1px solid var(--text-color);
 }
 
-thead tr, tfoot tr {
+thead tr,
+tfoot tr {
   background-color: #a05e17;
   line-height: 2em;
 }

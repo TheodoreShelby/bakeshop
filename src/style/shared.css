@@ -92,6 +92,7 @@ footer {
     grid-template-columns: 4fr 1fr;
     line-height: 3.5em;
     place-items: center;
+
   }
   .nav__menu {
     position: relative;
@@ -187,18 +188,35 @@ footer {
   }
   .order {
     grid-template-columns: 1fr;
-    row-gap: 20px;
+    row-gap: 40px;
   }
   .order__form {
     width: 100%;
-    padding: 50px 10px;
+    padding: 0px 20px;
   }
+  .order__form__info {
+    text-align: center;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+
   .order__form__info:nth-child(4) input {
     width: 100%;
   }
+
+
   .order__form__info:last-child {
     grid-template-columns: 1fr;
   }
+  .order__form__info:last-child p {
+    line-height: 2em;
+  }
+  .date-picker {
+    margin-bottom: 20px;
+  }
+
+
+
   form {
     width: 100%;
     border: 3px solid #a05e17;

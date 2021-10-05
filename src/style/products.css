@@ -41,7 +41,12 @@
   height: 50px;
   background-color: teal;
   overflow: hidden;
+  transition: .7s;
 }
+.item:hover .item__text-container {
+  background-color: var(--text-color);
+}
+
 .item__text__name,
 .item__text__details {
   width: 100%;
