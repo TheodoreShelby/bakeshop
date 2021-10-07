@@ -86,6 +86,12 @@ footer {
 /* based on Bootstrap 5 break points */
 /* extra small */
 @media screen and (max-width: 575px) {
+  /* carousel */
+  .carousel__item__text {
+    font-size: 1.4em;
+    padding: 0 10px;
+  }
+  
   /* navbar */
   header nav {
     font-size: .65em;
@@ -125,7 +131,9 @@ footer {
     border-bottom: 1px solid var(--text-color);
     border-radius: 5px;
   }
-
+  .path.active {
+    color: white;
+  }
 
   /* Products component */
   .products-container {
@@ -241,6 +249,12 @@ footer {
 
 /* small */
 @media screen and (min-width: 576px) and (max-width: 767px) {
+  /* carousel */
+  .carousel__item__text {
+    font-size: 1.8em;
+    margin: 0 10%
+  }
+
   /* navbar */
   header nav {
     font-size: .65em;
@@ -325,6 +339,12 @@ footer {
 
 /* medium */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  /* carousel */
+  .carousel__item__text {
+    font-size: 2em;
+    margin: 0 10%
+  }
+  
   /* navbar */
   nav {
     font-size: .65em;
@@ -404,6 +424,13 @@ footer {
 
 /* large */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* carousel */
+  .carousel__item__text {
+    font-size: 2.5em;
+    margin: 0 10%;
+  }
+
+  /* navbar */
   nav, footer {
     font-size: .85em;
   }

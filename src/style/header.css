@@ -16,15 +16,20 @@
   opacity: 1;
   transition-duration: .5s;
 }
-.carousel__item__text { margin-top: -1000px }
+.carousel__item__text {
+  margin-top: -1000px;
+  font-size: 3em;
+  font-weight: 700;
+  color: rgb(20, 238, 238);
+  text-shadow: 3px 3px 20px #B228EB;
+  background-color: teal;
+  border-radius: 20px;
+  padding: 0 40px;
+}
+
 
 .carousel__item.active .carousel__item__text {
-  text-transform: uppercase;
-  font-size: 3em;
-  color:  var(--text-color);
-  border-radius: 10px;
-  animation-name: text;
-  animation-duration: 4s;
+  animation: text 4s ease
 }
 
 @keyframes text {
@@ -95,6 +100,7 @@ nav ul:hover li {
 }
 
 /* nav menu */
+
 .nav__menu__links {
   justify-content: flex-end;
   width: 100%;
