@@ -1,4 +1,6 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { cartContext } from "../App"
+
 import { UserInfo } from "./UserInfo"
 import { UserOrder } from "./UserOrder"
 import { Modal } from "./Modal"
@@ -6,17 +8,18 @@ import { Modal } from "./Modal"
 import '../style/order.css'
 
 
-export const Order = ({ cart, setCart }) => {
-
+const Order = () => {
+	const { cart } = useContext(cartContext);
+	
 	const [name, setName] = useState('');
 	const [address, setAddress] = useState('');
 	const [email, setEmail] = useState('');
 	const [phoneNumber, setPhoneNumber] = useState();
 	const [gender, setGender] = useState();
-	const [chooseADay, setChooseADay] = useState(new Date())
+	const [chooseADay, setChooseADay] = useState(new Date());
 	const [showModal, setShowModal] = useState(false);
 	//we can save data of userData to database when user click on submit btn, but for now, we don't connect to any.
-	const [userData, setUserData] = useState({})
+	const [userData, setUserData] = useState({});
 
 	const resetInput = () => {
 		// reset states after submitting
@@ -63,7 +66,7 @@ export const Order = ({ cart, setCart }) => {
 							<UserOrder cart={cart} />
 						</div>
 
-						<Modal showModal={showModal} setCart={setCart} />
+						<Modal showModal={showModal} />
 						
 						<button
 							type='submit'
@@ -79,3 +82,5 @@ export const Order = ({ cart, setCart }) => {
 		</section>
 	)
 }
+
+export default Order;

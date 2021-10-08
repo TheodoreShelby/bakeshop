@@ -136,7 +136,7 @@ export const UserInfo = ({
 					name='email'
 					id='email'
 					required
-					type='text'
+					type='email'
 				/>
 			</div>
 

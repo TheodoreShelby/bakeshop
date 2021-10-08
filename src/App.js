@@ -5,17 +5,22 @@ import Header from './components/common/Header'
 import Footer from './components/common/Footer'
 
 
+export const cartContext = React.createContext();
+
+
 const App = () => {
-	const [cart, setCart] = useState([])
+
+	const [cart, setCart] = useState([]);
 
   return (
 		<Router>
-			<Header cart={cart} />
-			<Main setCart={setCart} cart={cart} />
+			<cartContext.Provider value={ { cart, setCart } }>
+				<Header />
+				<Main />
+			</cartContext.Provider>
 			<Footer />
 		</Router>
 	)
-
 }
 
 export default App;

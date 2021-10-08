@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
-import Products from './Products'
-import { ItemDetails } from './ItemDetails'
-import { Order } from './Order' 
 import { Route, Redirect } from 'react-router-dom'
+import Products from './Products'
+import ItemDetails from './ItemDetails'
+import Order from './Order' 
 
 
-const Main = ({ setCart, cart }) => {
-	//middleware state
+export const categoryContext = React.createContext();
+
+
+const Main = () => {
+
 	const [category, setCategory] = useState('all')
 
 	return (
@@ -17,15 +20,17 @@ const Main = ({ setCart, cart }) => {
 			</Route>
 
 			<Route exact path='/products'>
-				<Products category={category} setCategory={setCategory} />
+				<categoryContext.Provider value={ { category, setCategory }}>
+					<Products/>
+				</categoryContext.Provider>
 			</Route>
 
-			<Route path='/products/:index/:item'>
-				<ItemDetails cart={cart} setCart={setCart} />
+			<Route path='/products/:index/:id'>
+				<ItemDetails />
 			</Route>
 
 			<Route path='/order'>
-				<Order cart={cart} setCart={setCart} />
+				<Order/>
 			</Route>
 
 		</main>

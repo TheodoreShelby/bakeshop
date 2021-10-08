@@ -1,20 +1,32 @@
-import React from 'react'
+import { useContext } from 'react'
+import { cartContext } from '../App'
+
 import { useParams, Link } from 'react-router-dom'
+//menu array
 import { menu } from '../menu/menu'
-// import stylesheet
+// CSS
 import '../style/item details.css'
 
 
-export const ItemDetails = ({ cart, setCart }) => {
+const ItemDetails = () => {
 	const {index} = useParams();
-	const item = menu[index];	
-	
+	const { id } = useParams();
+	const item = menu[index];
+
+	const value = useContext(cartContext);
+	const { cart } = value;
+	const { setCart } = value;
+
 	//create new Cart with clicked item then pass it into setCart
 	const handleAdd = () => setCart([...cart, {...item}]);
 
 	const handleMinus = () => {
-		cart.splice(index, 1);
-		setCart([...cart]);
+		const removedItem = cart.find(item => item.id === id);
+		if (removedItem) {
+			const removedIndex = cart.indexOf(removedItem);
+			cart.splice(removedIndex, 1);
+			setCart([...cart]);
+		}
 	}
 
 
@@ -63,3 +75,5 @@ export const ItemDetails = ({ cart, setCart }) => {
 		</article>
 	)
 }
+
+export default ItemDetails;

@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
-import {	NavLink, Link } from 'react-router-dom'
+import { useState, useContext } from 'react'
+import { cartContext } from '../../App'
 
+import {	NavLink, Link } from 'react-router-dom'
 import { FaCartPlus } from 'react-icons/fa'
 
 
-export const NavBar = ({ cart }) => {
+const NavBar = () => {
 	//burger icon
 	const [showMenu, setShowMenu] = useState(false)
+	
+	const { cart } = useContext(cartContext)
 
 	return (
 		<nav className='grid text-upper text-center'>
@@ -39,3 +42,5 @@ export const NavBar = ({ cart }) => {
 		</nav>
 	)
 }
+
+export default NavBar

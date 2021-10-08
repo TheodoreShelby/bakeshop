@@ -1,4 +1,7 @@
+import { useContext } from 'react'
+
 import { FaFacebook,FaInstagram } from 'react-icons/fa'
+
 
 const Footer = () => {
 	return (

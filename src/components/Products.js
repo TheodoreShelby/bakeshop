@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react"
-import { SideMenu } from "./SideMenu";
+import { useState, useEffect, useContext } from "react"
+import { categoryContext } from "./Main";
 
+//Components
+import { SideMenu } from "./SideMenu";
+import { Item } from './Item'
 //menu array
 import { menu } from "../menu/menu"
-
+//CSS
 import '../style/products.css'
 
-import { Item } from './Item'
 
-
-const Products = ({ category, setCategory }) => {
+const Products = () => {
 	const [itemToShow, setItemToShow] = useState([]);
+	const { category } = useContext(categoryContext);
 
 	useEffect( () => {
 		setItemToShow(menu);
@@ -19,7 +21,7 @@ const Products = ({ category, setCategory }) => {
 	return (
 		<div className='products-container grid'>
 
-			<SideMenu setCategory={setCategory} category={category}  />
+			<SideMenu />
 
 			<section className='products grid'>
 				{

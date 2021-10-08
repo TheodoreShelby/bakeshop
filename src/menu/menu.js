@@ -64,7 +64,8 @@ export const menu = [
 		name: 'cream puffs',
 		img: creamPuffs,
 		price: 2.0,
-		category: 'cakes'
+		category: 'cakes',
+		id: uuid4()
 	},
 	{
 		name: 'dark chocolate cake',

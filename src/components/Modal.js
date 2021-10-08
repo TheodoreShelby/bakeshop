@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { cartContext } from "../App"
+
 import { useHistory } from 'react-router-dom';
 
 
+export const Modal = ({ showModal }) => {
+	const { setCart } = useContext(cartContext);
 
-export const Modal = ({ showModal, setCart }) => {
-	
 	const history = useHistory();
 	const toHomepage = () => {
 		history.push('/products');
