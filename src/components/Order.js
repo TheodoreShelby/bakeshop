@@ -1,12 +1,13 @@
-import { useState, useContext } from "react"
+import React, { Suspense, useState, useContext } from "react"
 import { cartContext } from "../App"
 
 import { UserInfo } from "./UserInfo"
 import { UserOrder } from "./UserOrder"
-import { Modal } from "./Modal"
 //import stylesheet
 import '../style/order.css'
 
+// import { Modal } from "./Modal"
+const Modal = React.lazy(() => import('./Modal'));
 
 const Order = () => {
 	const { cart } = useContext(cartContext);
@@ -65,8 +66,9 @@ const Order = () => {
 							/>
 							<UserOrder cart={cart} />
 						</div>
-
-						<Modal showModal={showModal} />
+						<Suspense fallback={<div>Just a moment....</div>}>
+							<Modal showModal={showModal} />
+						</Suspense>
 						
 						<button
 							type='submit'

@@ -1,20 +1,20 @@
 import {useState, useEffect} from 'react'
 
-import fullscreen1 from '../assets/images/full_screen/coffee_and_cake.jpg'
-import fullscreen2 from '../assets/images/full_screen/strawberry_croissants.jpg'
-import fullscreen3 from '../assets/images/full_screen/chocolate_cake.jpg'
+// import fullscreen1 from '../assets/images/full_screen/coffee_and_cake.jpg'
+// import fullscreen2 from '../assets/images/full_screen/strawberry_croissants.jpg'
+// import fullscreen3 from '../assets/images/full_screen/chocolate_cake.jpg'
 
 const carouselArr = [
 	{
-		carousel_img: fullscreen1,
+		carousel_img: 'https://cdn.pixabay.com/photo/2016/02/13/12/28/coffee-1197758_960_720.jpg',
 		carousel_text : 'best ingredients for best bake goods'
 	},
 	{
-		carousel_img: fullscreen2,
+		carousel_img: "https://cdn.pixabay.com/photo/2019/03/24/14/25/croissants-4077817_960_720.jpg",
 		carousel_text: 'stop worrying, start eating'
 	},
 	{
-		carousel_img: fullscreen3,
+		carousel_img: 'https://cdn.pixabay.com/photo/2018/04/04/16/44/food-3290299_960_720.jpg',
 		carousel_text: 'we are sweet lovers'
 	}
 ];

@@ -8,7 +8,7 @@ export const Item = ({ item, index }) => {
 			<Link className='link' to={`/products/${index}/${item.id}`}>
 
 				<div className='item__img-container'>
-					<img className='item__img' src={item.img} alt={item.name} />
+					<img className='item__img' src={item.img} alt={item.name} loading='lazy' />
 				</div>
 
 				<div className='item__text-container'>

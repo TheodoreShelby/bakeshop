@@ -4,7 +4,7 @@ import { cartContext } from "../App"
 import { useHistory } from 'react-router-dom';
 
 
-export const Modal = ({ showModal }) => {
+const Modal = ({ showModal }) => {
 	const { setCart } = useContext(cartContext);
 
 	const history = useHistory();
@@ -26,3 +26,5 @@ export const Modal = ({ showModal }) => {
 		</div>
 	)
 }
+
+export default Modal
