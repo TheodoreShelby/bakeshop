@@ -24,9 +24,9 @@
 .details__info__order {
   margin: 20px auto;
   width: 60%;
-  border: 1px solid var(--text-color);
   border-radius: 3px;
   transition: .35s;
+  border: 1px solid var(--text-color);
 }
 
 .details__info__order:hover{
@@ -39,7 +39,7 @@
   font-size: 1.4em;
   font-weight: 500;
 	color: var(--text-color);
-  padding: 10px 0;
+  padding: 7px 0;
 }
 
 .details__info__order:hover a {

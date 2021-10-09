@@ -39,6 +39,9 @@ const NavBar = () => {
 				</span>
 			</div>
 
+
+			{/* this area for mini page */}
+			
 		</nav>
 	)
 }

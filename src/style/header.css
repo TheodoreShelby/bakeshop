@@ -25,8 +25,6 @@
   border-radius: 20px;
   padding: 0 40px;
 }
-
-
 .carousel__item.active .carousel__item__text {
   animation: text 4s ease
 }
@@ -41,7 +39,6 @@
     opacity: 1;
   }
 }
-
 .carousel img {
   top: 0;
   left: 0;
@@ -51,12 +48,13 @@
   z-index:  -1;
 }
 
+
 /* navbar 
 	section */
 nav {
   grid-template-columns: 2fr 4fr 1fr;
   line-height: 3em;
-  margin: 50px 0 0;
+  margin: 50px 2% 0;
 }
 nav li {
   border-bottom: 2px solid var(--text-color);
@@ -65,12 +63,12 @@ nav ul:hover li {
   border-bottom: 2px solid transparent;
 }
 
-
 /* brand name */
 .brandName {
   justify-self: center;
-  font-size: 3em;
+  font-size: 3.5em;
   color: var(--text-color);
+  margin-left: 10px;
 }
 
 /* burger icon */
@@ -93,18 +91,15 @@ nav ul:hover li {
 .nav__menu__burger.active .nav__menu__burger__middle {
   opacity: 0;
 }
-
 .nav__menu__burger.active .nav__menu__burger__bottom {
   transform: rotate(45deg) translate(-10px, -6px);
 }
 
 /* nav menu */
-
 .nav__menu__links {
   justify-content: flex-end;
   width: 100%;
 }
-
 .path {
   color: var(--text-color);
   text-decoration: none;
@@ -122,8 +117,8 @@ nav ul:hover li {
   color: white;
 }
 
-/* cart icon */
 
+/* cart icon */
 .cart__icon {
   color: var(--text-color);
 }

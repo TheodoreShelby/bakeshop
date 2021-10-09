@@ -65,7 +65,7 @@ const ItemDetails = () => {
 				</div>
 
 				<div className='details__info__order text-center'>
-					<Link className='link block text-upper' to='/order'>
+					<Link className='link text-upper block' to='/order'>
 						go to cart
 					</Link>
 				</div>
