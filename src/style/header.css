@@ -54,8 +54,13 @@
 nav {
   grid-template-columns: 2fr 4fr 1fr;
   line-height: 3em;
-  margin: 50px 2% 0;
+  margin: 50px 0 0;
+  position: relative;
 }
+/* .brandName, */
+/* .nav__menu__links {
+  line-height: 3em;
+} */
 nav li {
   border-bottom: 2px solid var(--text-color);
 }
@@ -127,4 +132,86 @@ nav ul:hover li {
   padding-left: 3px;
   font-size: 1.35em;
   font-weight: 600;
+}
+
+
+/* miniPage */
+.miniPage h2 {
+  color: var(--text-color);
+  padding: 20px 0;
+}
+
+.miniPage-container {
+  background-color: white;
+  min-height: 10vh;
+  max-height: 50vh;
+  width: 400px;
+  z-index: 999;
+  position: absolute;
+  transition: .75s;
+  top: 100%;
+  right: 0px;
+  display: none;
+  overflow: scroll;
+  border: 5px solid var(--text-color);
+  line-height: 1em;
+}
+.miniPage__table-container p {
+  color: var(--text-color);
+  font-size: 1.2em;
+}
+.miniPage__table{
+  table-layout: auto;
+  width: 100%;
+  border-collapse:  collapse;
+}
+.miniPage-container ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.miniPage-container.active {
+  animation: slideIn .75s ease forwards;
+  display: block;
+}
+
+@keyframes slideIn {
+  from {
+    right: -400px;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+.miniPage__table {
+  width: 100%;
+  border: 1px solid var(--text-color);
+}
+nav .miniPage__table td {
+  padding: 5px 0;
+}
+.miniPage__table tbody td {
+  color: var(--text-color);
+}
+.miniPage__table th,
+.miniPage__table tfoot {
+  background-color: #a05e17;
+  color: white;
+}
+
+.miniPage__table td,
+.miniPage__table thead th {
+  border: 1px solid var(--text-color);
+  padding: 10px 0;
+}
+.miniPage__table tbody tr td:nth-child(1) {
+  text-align: left;
+  padding-left: 5px;
+}
+.miniPage__table tbody tr td:nth-child(2) {
+  text-transform: lowercase;
+}
+.adjust-cell {
+  align-items: center;
+  justify-content: space-around;
 }

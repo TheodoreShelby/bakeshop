@@ -21,7 +21,8 @@
 .pointer { cursor: pointer }
 
 /* text */
-.text-upper {text-transform: uppercase}
+.text-upper {text-transform: uppercase};
+.text-lower {text-transform: lowercase;}
 .text-center { text-align: center }
 .text-capitalize { text-transform: capitalize }
 .text-white { color: white }
@@ -139,6 +140,13 @@ footer {
   }
   .path.active {
     color: white;
+  }
+
+  /* miniPage */
+  .miniPage-container {
+    min-height: 10vh;
+    max-height: 50vh;
+    width: 375px;
   }
 
   /* Products component */
@@ -266,7 +274,6 @@ footer {
   nav .nav__menu__links {
     width: 100%;
   }
-
 
   /* Products component */
   .products-container {

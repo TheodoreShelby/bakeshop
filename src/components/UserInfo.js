@@ -59,6 +59,8 @@ export const UserInfo = ({
 	//this array for helping display selected month in text
 	const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+
+
 	//major functions
 	const datePickerRef = useRef();
 	useEffect(() => {
@@ -183,7 +185,7 @@ export const UserInfo = ({
 							 } / { selected.year }
 					</div>
 
-					<div className={toggleShowDate ? 'dates absolute active' : 'dates absolute'}>
+					<div className={`dates absolute ${toggleShowDate && 'active'}`}>
 
 						<div className='month flex'>
 							{/* add e.stopPropagation() on click event to keep these 3 div displayed */}

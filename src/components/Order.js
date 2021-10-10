@@ -6,7 +6,6 @@ import { UserOrder } from "./UserOrder"
 //import stylesheet
 import '../style/order.css'
 
-// import { Modal } from "./Modal"
 const Modal = React.lazy(() => import('./Modal'));
 
 const Order = () => {

@@ -140,25 +140,25 @@ option {
   animation: appear .15s;
 }
 
-table {
+.order__item-container table {
   table-layout: auto;
   width: 100%;
   margin: 0 auto;
   border-collapse:  collapse;
 }
 
-td,
-thead,
-thead tr th {
+.order-table td,
+.order-table thead,
+.order-table th {
   border: 1px solid var(--text-color);
 }
 
-thead tr,
-tfoot tr {
+.order-table__thead__tr,
+.order-table__tfoot__tr {
   background-color: #a05e17;
   line-height: 2em;
 }
-tbody tr td {
+.order-table tbody td {
   line-height: 2em;
   color: var(--text-color);
   font-weight: 600;

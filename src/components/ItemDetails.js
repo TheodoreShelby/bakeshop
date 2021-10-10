@@ -3,7 +3,7 @@ import { cartContext } from '../App'
 
 import { useParams, Link } from 'react-router-dom'
 //menu array
-import { menu } from '../menu/menu'
+import { menu } from '../utilities/menu'
 // CSS
 import '../style/item details.css'
 
@@ -12,7 +12,7 @@ const ItemDetails = () => {
 	const {index} = useParams();
 	const { id } = useParams();
 	const item = menu[index];
-
+	
 	const value = useContext(cartContext);
 	const { cart } = value;
 	const { setCart } = value;
@@ -28,7 +28,6 @@ const ItemDetails = () => {
 			setCart([...cart]);
 		}
 	}
-
 
 	return (
 		<article className='details grid'>

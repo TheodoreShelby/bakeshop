@@ -5,7 +5,7 @@ import { categoryContext } from "./Main";
 import { SideMenu } from "./SideMenu";
 import { Item } from './Item'
 //menu array
-import { menu } from "../menu/menu"
+import { menu } from "../utilities/menu"
 //CSS
 import '../style/products.css'
 

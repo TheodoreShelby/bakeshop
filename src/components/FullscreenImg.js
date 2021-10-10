@@ -1,8 +1,5 @@
 import {useState, useEffect} from 'react'
 
-// import fullscreen1 from '../assets/images/full_screen/coffee_and_cake.jpg'
-// import fullscreen2 from '../assets/images/full_screen/strawberry_croissants.jpg'
-// import fullscreen3 from '../assets/images/full_screen/chocolate_cake.jpg'
 
 const carouselArr = [
 	{

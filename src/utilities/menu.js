@@ -52,7 +52,7 @@ export const menu = [
 		id: uuid4()
 	},
 	{
-		name: 'dark chocolate cake',
+		name: 'dark chocolate',
 		img: 'https://cdn.pixabay.com/photo/2014/10/13/16/11/cake-486874__340.jpg',
 		price: 10.0,
 		category: 'cakes',
@@ -73,7 +73,7 @@ export const menu = [
 		id: uuid4()
 	},
 	{
-		name: 'strawberry swiss roll',
+		name: 'strawberry roll',
 		img: 'https://media.istockphoto.com/photos/strawberry-shortcake-cake-roll-with-cream-cheese-whipped-cream-picture-id936618780?b=1&k=20&m=936618780&s=170667a&w=0&h=zMx4U6r5aXhLGNTILLtb8g1dHFircFdFwZ8SVnPlld4=',
 		price: 3.5,
 		category: 'cakes',
