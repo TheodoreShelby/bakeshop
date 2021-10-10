@@ -31,7 +31,7 @@ export const menu = [
 		id: uuid4()
 	},
 	{
-		name: 'chocolate brownie',
+		name: 'brownie',
 		img: 'https://cdn.pixabay.com/photo/2014/11/28/08/03/brownie-548591__340.jpg',
 		price: 3.0,
 		category: 'cakes',
