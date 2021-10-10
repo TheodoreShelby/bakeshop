@@ -144,8 +144,8 @@ nav ul:hover li {
 .miniPage-container {
   background-color: white;
   min-height: 10vh;
-  max-height: 50vh;
-  width: 400px;
+  max-height: 60vh;
+  width: 420px;
   z-index: 999;
   position: absolute;
   transition: .75s;
@@ -155,6 +155,7 @@ nav ul:hover li {
   overflow: scroll;
   border: 5px solid var(--text-color);
   line-height: 1em;
+  font-size: .9em;
 }
 .miniPage__table-container p {
   color: var(--text-color);
@@ -197,10 +198,14 @@ nav .miniPage__table td {
 .miniPage__table tfoot {
   background-color: #a05e17;
   color: white;
+  font-weight: 700;
+}
+.miniPage__table tfoot td {
+  padding: 10px 0;
 }
 
 .miniPage__table td,
-.miniPage__table thead th {
+.miniPage__table th {
   border: 1px solid var(--text-color);
   padding: 10px 0;
 }
