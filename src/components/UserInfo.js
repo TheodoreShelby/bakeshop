@@ -110,64 +110,80 @@ export const UserInfo = ({
 			
 			<div className='order__form__info grid'>
 				<label htmlFor='name'>Full name:</label>
-				<input
-					placeholder='your full name'
-					onChange={handleData}
-					name='name'
-					id='name'
-					required
-				/>
+				<div>
+					<input
+						placeholder='your full name'
+						onChange={handleData}
+						name='name'
+						id='name'
+						required
+						/>
+					<span className='relative'></span>
+				</div>
 			</div>
 
 			<div className='order__form__info grid'>
 				<label htmlFor='address'>Address:</label>
-				<input
-					placeholder='Where can we deliver?'
-					onChange={handleData}
-					name='address' 
-					id='address'
-					required
-				/>
+
+				<div>
+					<input
+						placeholder='Where can we deliver?'
+						onChange={handleData}
+						name='address' 
+						id='address'
+						required
+						/>
+					<span className='relative'></span>
+				</div>
 			</div>
 
 			<div className='order__form__info grid'>
 				<label htmlFor='email'>Email:</label>
-				<input
-					placeholder='we confirm your order via email'
-					onChange={handleData}
-					name='email'
-					id='email'
-					required
-					type='email'
-				/>
+				<div>
+					<input
+						placeholder='we confirm your order via email'
+						onChange={handleData}
+						name='email'
+						id='email'
+						required
+						type='email'
+					/>
+					<span className='relative'></span>
+				</div>
 			</div>
 
 			<div className='order__form__info grid'>
 				<label htmlFor='phoneNumber'>Phone number:</label>
-				<input
-					pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}"
-					placeholder='xxxx-xxx-xxx'
-					onChange={handleData}
-					name='phone-number'
-					id='phoneNumber'
-					required
-					type='tel'
-				/>
+				<div>
+					<input
+						pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}"
+						placeholder='xxxx-xxx-xxx'
+						onChange={handleData}
+						name='phone-number'
+						id='phoneNumber'
+						required
+						type='tel'
+					/>
+					<span className='relative'></span>
+				</div>
 			</div>
 
 			<div className='order__form__info grid'>
 				<label htmlFor='gender'>Gender</label>
-				<select
-					name='gender'
-					id='gender'
-					required
-					onChange={handleData}
-				>
-					<option value='' >please select</option>
-					<option value='male'>Male</option>
-					<option value='female'>Female</option>
-					<option value='others'>Others</option>
-				</select>
+				<div>
+					<select
+						name='gender'
+						id='gender'
+						required
+						onChange={handleData}
+						>
+						<option value='' >please select</option>
+						<option value='male'>Male</option>
+						<option value='female'>Female</option>
+						<option value='others'>Others</option>
+					</select>
+					<span className='relative'></span>
+				</div>
 			</div>
 
 			<div className='order__form__info grid' ref={datePickerRef}>

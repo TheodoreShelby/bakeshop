@@ -68,14 +68,47 @@ form h2 {
 input,
 select {
   padding: 5px;
+  width: 100%;
 }
 input,
 label {
   line-height: 2em;
 }
-select {
-  height: 2.3em;
+.order__form__info input + span {
+  line-height: 2em;
+  left: 5px;
 }
+.order__form__info input + span::before {
+  position: absolute;
+}
+
+.order__form__info input:valid + span::before {
+  content: '✓';
+  color: green;
+  font-weight: 900;
+}
+.order__form:hover input:valid + span::before {
+  color: white;
+}
+select {
+  height: 2.7em;
+}
+.order__form__info select + span {
+  line-height: 2em;
+  left: 5px;
+}
+.order__form__info select + span::before {
+  position: absolute;
+}
+.order__form__info select:valid + span::before {
+  content: '✓';
+  color: green;
+  font-weight: 900;
+}
+.order__form:hover select:valid + span::before {
+  color: white;
+}
+
 option {
   font-size: 1.1em;
 }
