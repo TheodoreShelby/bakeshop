@@ -402,7 +402,9 @@ footer {
     line-height: 1.5em;
     width: 100%;
   }
-
+  .details__info__name {
+    line-height: 1em;
+  }
 
   /* Order component */
   .order {
