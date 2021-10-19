@@ -6,9 +6,7 @@ import { FaCartPlus } from 'react-icons/fa'
 
 
 export const MiniPage = () => {
-	const value = useContext(cartContext);
-	const { cart } = value;
-	const { setCart } = value;
+	const { cart, setCart } = useContext(cartContext);
 
 	// show/hide side page
 	const [toggleMiniPage, setMiniPage] = useState(false);

@@ -9,13 +9,10 @@ import '../style/item details.css'
 
 
 const ItemDetails = () => {
-	const {index} = useParams();
-	const { id } = useParams();
+	const {index, id } = useParams();
 	const item = menu[index];
 	
-	const value = useContext(cartContext);
-	const { cart } = value;
-	const { setCart } = value;
+	const { cart, setCart } = useContext(cartContext);
 
 	//create new Cart with clicked item then pass it into setCart
 	const handleAdd = () => setCart([...cart, {...item}]);

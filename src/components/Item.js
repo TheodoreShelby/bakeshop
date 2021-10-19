@@ -21,4 +21,3 @@ export const Item = ({ item, index }) => {
 		</article>
 	)
 }
-
